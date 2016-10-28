@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# SupplyHub
+A hub for accessing all of Supply's tools and lists.
+>>>>>>> b48d81056e04f990da8d190c5e02ba505c20a5a6
