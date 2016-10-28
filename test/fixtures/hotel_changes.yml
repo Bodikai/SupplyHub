@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_ref: MyString
+  lead_surname: MyString
+  date_received: 2016-10-27
+  date_advised: 2016-10-27
+  arrival_date: 2016-10-27
+  change_reason: MyString
+  catalyst: MyString
+  original_hotel: MyString
+  original_hotel_resort: MyString
+  original_hotel_destination: MyString
+  new_hotel: MyString
+  original_cost: 1.5
+  new_cost: 1.5
+  currency: MyString
+  exchange_rate: 1.5
+  status: MyString
+  date_resolved: 2016-10-27
+  resolved_by: MyString
+  notes: MyText
+
+two:
+  booking_ref: MyString
+  lead_surname: MyString
+  date_received: 2016-10-27
+  date_advised: 2016-10-27
+  arrival_date: 2016-10-27
+  change_reason: MyString
+  catalyst: MyString
+  original_hotel: MyString
+  original_hotel_resort: MyString
+  original_hotel_destination: MyString
+  new_hotel: MyString
+  original_cost: 1.5
+  new_cost: 1.5
+  currency: MyString
+  exchange_rate: 1.5
+  status: MyString
+  date_resolved: 2016-10-27
+  resolved_by: MyString
+  notes: MyText

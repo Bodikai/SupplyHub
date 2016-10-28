@@ -1,0 +1,2 @@
+module HotelChangesHelper
+end

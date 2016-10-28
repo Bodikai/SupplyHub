@@ -1,0 +1,63 @@
+<h1>Editing Hotel Change</h1>
+
+<%= form_for :hotelchange, url: hotel_change_path(@hotelchange), method: :patch do |f| %>
+
+	<% if @hotelchange.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@hotelchange.errors.count, "error") %> prohibited
+				this Hotel Change from being saved:
+			</h2>
+			<ul>
+				<% @hotelchange.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<table>
+		<tr valign="top">
+	  		<td>
+			  	<p><%= f.label :booking_ref %> <%= f.text_field :booking_ref %></p>
+			</td>
+	  	</tr>
+	  	<tr valign="top">
+	  		<td>
+		  		<p><%= f.label :lead_surname %> <%= f.text_field :lead_surname %></p>
+		  		<p><%= f.label :date_received %> <%= f.date_field :date_received %></p>
+		  		<p><%= f.label :date_advised %> <%= f.date_field :date_advised %></p>
+		  		<p><%= f.label :arrival_date %> <%= f.date_field :arrival_date %></p>
+		  		<p><%= f.label :change_reason %> <%= f.select :change_reason, ['','Early Closure','Facilities/Refurbishment','Late Opening','Overbooking','Stop Sale','System Error'] %></p>
+		  		<p><%= f.label :catalyst %> <%= f.select :catalyst, ['','Internal','External'] %></p>
+	  		</td>
+	  		<td>
+	  			<p><%= f.label :original_hotel %> <%= f.text_field :original_hotel %></p>
+	  			<p><%= f.label :new_hotel %> <%= f.text_field :new_hotel %></p>
+		  		<p><%= f.label :original_cost %> <%= f.number_field :original_cost %></p>
+		  		<p><%= f.label :new_cost %> <%= f.number_field :new_cost %></p>
+		  		<p><%= f.label :currency %> <%= f.select :currency, ['','EUR','GBP','USD','N/A'] %></p>
+		  		<p><%= f.label :exchange_rate %> <%= f.number_field :exchange_rate %></p>
+		  	</td>
+	  		<td>
+		  		<p><%= f.label :status %> <%= f.select :status, ['','Accepted','Advised','Arranged AOA','Cancelled','Needs New Alt','Reinstated'] %></p>
+		  		<p><%= f.label :date_resolved %> <%= f.date_field :date_resolved %></p>
+		  		<p><%= f.label :resolved_by %> <%= f.text_field :resolved_by %></p>
+	  		</td>
+		</tr>
+	</table>
+
+	<table>
+		<tr valign="top">
+			<td>
+				<p><%= f.label :notes %> <%= f.text_area :notes %></p>
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		<%= f.submit "Submit" %>
+	</p>
+<% end %>
+
+<%= link_to 'Back', hotel_changes_path %>

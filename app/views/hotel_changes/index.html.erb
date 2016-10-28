@@ -1,0 +1,29 @@
+<h1>LISTING HOTEL CHANGES</h1>
+
+<p><%= link_to 'New Hotel Change', new_hotel_change_path %></p>
+
+<table border="1">
+	<tr>
+		<th>BOOKING<br>REF</th>
+		<th>LEAD<br>SURNAME</th>
+		<th>DATE<br>RECEIVED</th>
+		<th>DATE<br>ADVISED</th>
+		<th>ARRIVAL<br>DATE</th>
+		<th>ORIGINAL<br>HOTEL</th>
+		<th>STATUS</th>
+	</tr>
+
+	<% @hotelchanges.each do |hotelchange| %>
+		<tr>
+			<td><%= hotelchange.booking_ref %></td>
+			<td><%= hotelchange.lead_surname %></td>
+			<td><%= hotelchange.date_received %></td>
+			<td><%= hotelchange.date_advised %></td>
+			<td><%= hotelchange.arrival_date %></td>
+			<td><%= hotelchange.original_hotel %></td>
+			<td><%= hotelchange.status %></td>
+			<td><%= link_to 'Show', hotel_change_path(hotelchange) %></td>
+			<td><%= link_to 'Edit', edit_hotel_change_path(hotelchange) %></td>
+		</tr>
+	<% end %>
+</table>

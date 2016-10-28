@@ -1,0 +1,48 @@
+<h1>New Hotel Change</h1>
+
+<%= form_for :hotelchange do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :booking_ref %></th>
+      <th><%= f.label :date_received %></th>
+      <th><%= f.label :date_advised %></th>
+      <th><%= f.label :arrival_date %></th>
+      <th><%= f.label :lead_surname %></th>
+      <th><%= f.label :original_hotel %></th>
+      <th><%= f.label :change_reason %></th>
+      <th><%= f.label :new_hotel %></th>
+      <th><%= f.label :catalyst %></th>
+      <th><%= f.label :original_cost %></th>
+      <th><%= f.label :new_cost %></th>
+      <th><%= f.label :currency %></th>
+      <th><%= f.label :exchange_rate %></th>
+      <th><%= f.label :status %></th>
+      <th><%= f.label :date_resolved %></th>
+      <th><%= f.label :resolved_by %></th>
+      <th><%= f.label :notes %></th>
+    </tr>
+    <tr>
+      <td><%= f.text_field :booking_ref %></td>
+      <td><%= f.date_field :date_received %></td>
+      <td><%= f.date_field :date_advised %></td>
+      <td><%= f.date_field :arrival_date %></td>
+      <td><%= f.text_field :lead_surname %></td>
+      <td><%= f.text_field :original_hotel %></td>
+      <td><%= f.select :change_reason, ['','Early Closure','Facilities/Refurbishment','Late Opening','Overbooking','Stop Sale','System Error'] %></td>
+      <td><%= f.text_field :new_hotel %></td>
+      <td><%= f.select :catalyst, ['','Internal','External'] %></td>
+      <td><%= f.number_field :original_cost %></td>
+      <td><%= f.number_field :new_cost %></td>
+      <td><%= f.select :currency, ['','EUR','GBP','USD','N/A'] %></td>
+      <td><%= f.number_field :exchange_rate %></td>
+      <td><%= f.select :status, ['','Accepted','Advised','Arranged AOA','Cancelled','Needs New Alt','Reinstated'] %></td>
+      <td><%= f.date_field :date_resolved %></td>
+      <td><%= f.text_field :resolved_by %></td>
+      <td><%= f.text_area :notes %></td>
+  </tr>
+</table>
+ 
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>

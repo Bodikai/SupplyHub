@@ -1,0 +1,21 @@
+
+<p>	<strong>BOOKING REF:</strong> <%= @hotelchange.booking_ref %> </p>
+<p>	<strong>LEAD SURNAME:</strong> <%= @hotelchange.lead_surname %> </p>
+<p>	<strong>DATE RECEIVED:</strong> <%= @hotelchange.date_received %> </p>
+<p>	<strong>DATE ADVISED:</strong> <%= @hotelchange.date_advised %> </p>
+<p>	<strong>ARRIVAL DATE:</strong> <%= @hotelchange.arrival_date %> </p>
+<p>	<strong>CHANGE REASON:</strong> <%= @hotelchange.change_reason %> </p>
+<p>	<strong>CATALYST:</strong> <%= @hotelchange.catalyst %> </p>
+<p>	<strong>ORIGINAL HOTEL:</strong> <%= @hotelchange.original_hotel %> </p>
+<p>	<strong>NEW HOTEL:</strong> <%= @hotelchange.new_hotel %> </p>
+<p>	<strong>ORIGINAL COST:</strong> <%= @hotelchange.original_cost %> </p>
+<p>	<strong>NEW COST:</strong> <%= @hotelchange.new_cost %> </p>
+<p>	<strong>CURRENCY:</strong> <%= @hotelchange.currency %> </p>
+<p>	<strong>EXCHANGE RATE:</strong> <%= @hotelchange.exchange_rate %> </p>
+<p>	<strong>STATUS:</strong> <%= @hotelchange.status %> </p>
+<p>	<strong>DATE RESOLVED:</strong> <%= @hotelchange.date_resolved %> </p>
+<p>	<strong>RESOLVED BY:</strong> <%= @hotelchange.resolved_by %>
+<p>	<strong>NOTES:</strong> <%= @hotelchange.notes %> </p>
+
+<%= link_to 'Edit', edit_hotel_change_path(@hotelchange) %>
+<%= link_to 'Back', hotel_changes_path %>
