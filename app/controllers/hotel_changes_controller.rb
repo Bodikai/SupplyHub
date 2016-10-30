@@ -36,6 +36,13 @@ class HotelChangesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@hotelchange = HotelChange.find(params[:id])
+		@hotelchange.destroy
+
+		redirect_to hotel_changes_path
+	end
+
 	private
 		def hotelchange_params
 			params.require(:hotelchange).permit(:booking_ref, :lead_surname,

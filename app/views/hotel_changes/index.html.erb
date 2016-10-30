@@ -24,6 +24,9 @@
 			<td><%= hotelchange.status %></td>
 			<td><%= link_to 'Show', hotel_change_path(hotelchange) %></td>
 			<td><%= link_to 'Edit', edit_hotel_change_path(hotelchange) %></td>
+			<td><%= link_to 'Delete', hotel_change_path(hotelchange),
+					method: :delete,
+					data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 </table>
