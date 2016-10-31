@@ -45,7 +45,10 @@ class HotelChangesController < ApplicationController
 
 	private
 		def hotelchange_params
-			params.require(:hotelchange).permit(:booking_ref, :lead_surname,
+			# NOTE: :hotel_change in next line was previously :hotelchange, which
+			# 		fine until implementing the partial view. This change was the
+			# 		the only fix that worked. No idea why :hotelchange worked before.
+			params.require(:hotel_change).permit(:booking_ref, :lead_surname,
 				:date_received, :date_advised, :arrival_date, :change_reason,
 				:catalyst, :original_hotel, :new_hotel, :original_cost,
 				:new_cost, :currency, :exchange_rate, :status, :date_resolved,
